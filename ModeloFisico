@@ -1,0 +1,30 @@
+/* Logico_2: */
+
+CREATE TABLE Contato (
+    IdContato INTEGER PRIMARY KEY,
+    Nome VARCHAR,
+    Email VARCHAR,
+    Mensagem VARCHAR
+);
+
+CREATE TABLE Destino (
+    Id INTEGER PRIMARY KEY,
+    NomeDestino VARCHAR,
+    DataVolta DATE,
+    DataIda DATE,
+    NumeroVoo SMALLINT,
+    IdCadastro INTEGER
+);
+
+CREATE TABLE Cadastro (
+    IdCadastro INTEGER PRIMARY KEY,
+    Nome VARCHAR,
+    Email VARCHAR,
+    CPF INTEGER,
+    Telefone SMALLINT,
+    Destino VARCHAR
+);
+ 
+ALTER TABLE Destino ADD CONSTRAINT FK_Destino_1
+    FOREIGN KEY (IdCadastro???)
+    REFERENCES IdCadastro (Cadastro);
